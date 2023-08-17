@@ -198,9 +198,8 @@ class GameServiceTest extends TestCase
             ['Player B Card Count: 1'],
             ['Player C Card Count: 3'],
             ['Face-up Card Count: 4'],
-            [DisplayService::MESSAGE_DIVIDER],
         ];
-        $matcher  = self::exactly(6);
+        $matcher  = self::exactly(5);
 
         $displayServiceMock->expects($matcher)
             ->method('message')
@@ -211,7 +210,6 @@ class GameServiceTest extends TestCase
                     3 => $this->assertEquals($expected[2], [$message]),
                     4 => $this->assertEquals($expected[3], [$message]),
                     5 => $this->assertEquals($expected[4], [$message]),
-                    6 => $this->assertEquals($expected[5], [$message]),
                 };
             });
 
