@@ -13,7 +13,7 @@ class ConfigurationService
      * @param DisplayService $displayService
      */
     public function __construct(
-        public readonly DisplayService $displayService,
+        private readonly DisplayService $displayService,
     ) {}
 
     /**
